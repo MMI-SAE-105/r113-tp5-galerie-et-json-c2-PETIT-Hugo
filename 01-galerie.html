@@ -5,6 +5,7 @@
     top: 0;
     background-color: gray;
     display: grid;
+    place-content: center;
 
 }
 
@@ -22,6 +23,7 @@
 /* Use a grid for easy centering */
 /* Center vertically and horizontally */
 }
+
 .overlay::after {
 /* Add content : "X" */
 /* White text color */
@@ -38,11 +40,16 @@
 /* White border of 2px */
 /* Rounded border */
 }
+
 .overlay>figure {
 /* No margin */
+margin: 0;
 /* 1rem padding */
+padding: 1rem;
 /* White border of 2px */
+border: 2px solid white;
 }
+
 .overlay>figure>img {
 /* Max width 100% for responsive image */
 /* Height auto for keeping the ratio */
