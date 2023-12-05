@@ -10,6 +10,10 @@
     <script src="//unpkg.com/alpinejs" defer></script>
     <style>
 
+        body {
+            background-image: url("https://dynamicmedia.livenationinternational.com/k/i/u/437c8a3e-4ba0-42cd-a3ff-ee5376586128.png?auto=webp&width=1507.2");
+        } 
+
 
 .overlay {
 /* Sit on top of the page content */
@@ -89,12 +93,14 @@ height: auto;
     imageAffichee : null,
     }">
 
-    <h1>Galerie</h1>
-    <p>lorem⇥</p>
-    <img src="https://picsum.photos/id/236/40/60" alt="village"
-        @click="imageAffichee = 'https://picsum.photos/id/236/200/300'">
-    <img src="https://picsum.photos/id/237/40/60" alt="miniature chiot"
-        @click="imageAffichee = 'https://picsum.photos/id/237/200/300'">
+    <h1>Galerie de discographies</h1>
+    <p>Discographie de JID</p>
+    <img src="https://m.media-amazon.com/images/I/51cX+Ntet6L._SY100_.jpg" alt="village"
+        @click="imageAffichee = 'https://m.media-amazon.com/images/I/51cX+Ntet6L._SY500_.jpg'">
+    <img src="https://m.media-amazon.com/images/I/61NXeCK9vHL._SX100_SY100_QL70_ML2_.jpg" alt="miniature chiot"
+        @click="imageAffichee = 'https://m.media-amazon.com/images/I/61NXeCK9vHL._SX500_SY500_QL70_ML2_.jpg'">
+    <img src="https://m.media-amazon.com/images/I/51+6Uca63LL._SY100_.jpg" alt="miniature chiot"
+        @click="imageAffichee = 'https://m.media-amazon.com/images/I/51+6Uca63LL._SY500_.jpg'">
 
     <div class="overlay" x-show="imageAffichee" @click="imageAffichee = null"
         @keyup.escape.windows="imageAffichee = null">
