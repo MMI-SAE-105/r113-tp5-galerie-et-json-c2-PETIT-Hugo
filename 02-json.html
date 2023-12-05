@@ -5,14 +5,14 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <title>Chargment JSON</title>
+        <title>JSON</title>
         <script defer src="https://unpkg.com/alpinejs"></script>
 </head>
 
 <body>
         <h1>JSON</h1>
         <ul x-data="{
-                données: [
+                donnees: [
                 {
                         nom: 'Jean',
                         projet: 'Alpine.js'
@@ -31,8 +31,15 @@
         
         ],
         }">
+
+        <template x-for ='obj in donnees'>
+                <li>
+                        <span x-text="obj.nom"></span> :
+                        <a :href="obj.url" x-text="obj.projet"></a>
+                </li>
+        </template>
         
-</ul>"
+</ul>
 
 
 
