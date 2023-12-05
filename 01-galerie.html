@@ -93,7 +93,8 @@ height: auto;
     <p>lorem⇥</p>
     <div class="overlay"
         x-shox="imageAffichee"
-        @click="imageAffichee = null">
+        @click="imageAffichee = null"
+        @keyup.escape.windows = "imageAffichee = null">
         <figure><img :src="imageAffichee" alt="image 237... un chiot"></figure>
     </div>
 </body>
