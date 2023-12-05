@@ -85,19 +85,11 @@ height: auto;
 
 </style>
 </head>
+<body>
 
-<body x-data="nomdeProp : 'https://picsum.photos/id/237/200/300'">
-<h1>Galerie</h1>
-<p>lorem⇥</p>
-<img src="https://picsum.photos/id/236/40/60" alt="village" @click="nomdeProp = 'https://picsum.photos/id/236/200/300'">
-<img src="https://picsum.photos/id/237/40/60" alt="miniature chiot" @click="nomdeProp = 'https://picsum.photos/id/237/200/300'">
-
-<template x-for="image in images">
-    <img :src="image.petite" :alt="image.alt"
-        @click="nomdeProp = "image.grande">
-</template>
-
-<div class="overlay" x-show="nomdeProp" @click="nomdeProp = null" @keyup.escape.windows = "nomdeProp = null">
-    <figure><img src="nomdeProp" alt="image 237... un chiot"></figure>
-</div>
+    <h1>Galerie</h1>
+    <p>lorem⇥</p>
+    <div class="overlay">
+        <figure><img src="https://picsum.photos/id/237/400/300" alt="image 237... un chiot"></figure>
+    </div>
 </body>
