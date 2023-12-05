@@ -12,95 +12,115 @@
 
         body {
             background-image: url("https://dynamicmedia.livenationinternational.com/k/i/u/437c8a3e-4ba0-42cd-a3ff-ee5376586128.png?auto=webp&width=1507.2");
+            background-size: 100%;
+            color:azure ;
         } 
 
+        h1 { 
+            color: white; 
+            font-family: 'Droid serif', serif; 
+            font-size: 36px; 
+            font-weight: 400; 
+            font-style: italic; 
+            line-height: 44px; 
+            margin: 0 0 12px; 
+        }
 
-.overlay {
-/* Sit on top of the page content */
-position: absolute;
-/* Full width (cover the whole page) */
-width: 100vw;
-/* Full height (cover the whole page) */
-height: 100 vh;
-/* Stay at the top */
-top: 0;
-/* Stay at the left */
-left: 0;
-/* Stay at the right */
-right: 0;
-/* Stay at the bottom */
-bottom: 0;
-/* Black background with opacity */
-background-color: rgba(0, 0, 0, 0.9);
-/* Add a pointer on hover */
-cursor: pointer;
-/* Use a grid for easy centering */
-display: grid;
-/* Center vertically and horizontally */
-place-content: center;
-}
+        .JID {
+            align-content: right;
+        }
 
-.overlay::after {
-/* Add content : "X" */
-content : "X";
-/* White text color */
-color: white;
-/* Black background color */
-background-color: black;
-/* Font family "sans-serif" */
-font-family: sans-serif;
-/* Centered text */
-text-align: center;
-/* Line height ( idem height ) */
-line-height: 2rem; height: 2rem;
-/* Display as a block */
-display: block;
-/* Position absolute */
-position: absolute;
-/* 1rem from the top */
-top: 1rem;
-/* 1rem from the right */
-right: 1rem;
-/* 2rem width */
-width: 2rem;
-/* 2rem height */
-height: 2rem;
-/* White border of 2px */
-border: 2px solid white;
-/* Rounded border */
-border-radius: 50%;
-}
 
-.overlay>figure {
-/* No margin */
-margin: 0;
-/* 1rem padding */
-padding: 1rem;
-/* White border of 2px */
-border: 2px solid white;
-}
+        .overlay {
+        /* Sit on top of the page content */
+        position: absolute;
+        /* Full width (cover the whole page) */
+        width: 100vw;
+        /* Full height (cover the whole page) */
+        height: 100 vh;
+        /* Stay at the top */
+        top: 0;
+        /* Stay at the left */
+        left: 0;
+        /* Stay at the right */
+        right: 0;
+        /* Stay at the bottom */
+        bottom: 0;
+        /* Black background with opacity */
+        background-color: rgba(0, 0, 0, 0.9);
+        /* Add a pointer on hover */
+        cursor: pointer;
+        /* Use a grid for easy centering */
+        display: grid;
+        /* Center vertically and horizontally */
+        place-content: center;
+        }
 
-.overlay>figure>img {
-/* Max width 100% for responsive image */
-max-width: 100%;
-/* Height auto for keeping the ratio */
-height: auto;
-}
+        .overlay::after {
+        /* Add content : "X" */
+        content : "X";
+        /* White text color */
+        color: white;
+        /* Black background color */
+        background-color: black;
+        /* Font family "sans-serif" */
+        font-family: sans-serif;
+        /* Centered text */
+        text-align: center;
+        /* Line height ( idem height ) */
+        line-height: 2rem; height: 2rem;
+        /* Display as a block */
+        display: block;
+        /* Position absolute */
+        position: absolute;
+        /* 1rem from the top */
+        top: 1rem;
+        /* 1rem from the right */
+        right: 1rem;
+        /* 2rem width */
+        width: 2rem;
+        /* 2rem height */
+        height: 2rem;
+        /* White border of 2px */
+        border: 2px solid white;
+        /* Rounded border */
+        border-radius: 50%;
+        }
 
-</style>
+        .overlay>figure {
+        /* No margin */
+        margin: 0;
+        /* 1rem padding */
+        padding: 1rem;
+        /* White border of 2px */
+        border: 2px solid white;
+        }
+
+        .overlay>figure>img {
+        /* Max width 100% for responsive image */
+        max-width: 100%;
+        /* Height auto for keeping the ratio */
+        height: auto;
+        }
+
+    </style>    
 </head>
+
+
 <body x-data="{
     imageAffichee : null,
     }">
 
-    <h1>Galerie de discographies</h1>
-    <p>Discographie de JID</p>
+    <h1>Galerie : discographie de JID</h1>
+    <section id="JID">
+    <p>JID est un rappeur américain ayant sorti 3 albums studios solo, ici dans l'ordre : Dicaprio 2, The Never Story et The Forever Story</p>
     <img src="https://m.media-amazon.com/images/I/51cX+Ntet6L._SY100_.jpg" alt="village"
         @click="imageAffichee = 'https://m.media-amazon.com/images/I/51cX+Ntet6L._SY500_.jpg'">
     <img src="https://m.media-amazon.com/images/I/61NXeCK9vHL._SX100_SY100_QL70_ML2_.jpg" alt="miniature chiot"
         @click="imageAffichee = 'https://m.media-amazon.com/images/I/61NXeCK9vHL._SX500_SY500_QL70_ML2_.jpg'">
     <img src="https://m.media-amazon.com/images/I/51+6Uca63LL._SY100_.jpg" alt="miniature chiot"
         @click="imageAffichee = 'https://m.media-amazon.com/images/I/51+6Uca63LL._SY500_.jpg'">
+    </section>
 
     <div class="overlay" x-show="imageAffichee" @click="imageAffichee = null"
         @keyup.escape.windows="imageAffichee = null">
