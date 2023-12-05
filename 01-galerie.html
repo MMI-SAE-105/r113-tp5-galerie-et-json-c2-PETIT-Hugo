@@ -86,18 +86,18 @@ height: auto;
 </style>
 </head>
 <body x-data="{
-    imageAffichee : 'https://picsum.photos/id/237/400/300'
-}">
+    imageAffichee : 'https://picsum.photos/id/237/400/300',
+    }">
 
     <h1>Galerie</h1>
     <p>lorem⇥</p>
-    <img src="https://picsum.photos/id/236/40/60" alt="village" @click="imageAffichee = 'https://picsum.photos/id/236/200/300'">
-    <img src="https://picsum.photos/id/237/40/60" alt="miniature chiot" @click="imageAffichee = 'https://picsum.photos/id/237/200/300'">
+    <img src="https://picsum.photos/id/236/40/60" alt="village"
+        @click="imageAffichee = 'https://picsum.photos/id/236/200/300'">
+    <img src="https://picsum.photos/id/237/40/60" alt="miniature chiot"
+        @click="imageAffichee = 'https://picsum.photos/id/237/200/300'">
 
-    <div class="overlay"
-        x-shox="imageAffichee"
-        @click="imageAffichee = null"
-        @keyup.escape.windows = "imageAffichee = null">
+    <div class="overlay" x-show="imageAffichee" @click="imageAffichee = null"
+        @keyup.escape.windows="imageAffichee = null">
         <figure><img :src="imageAffichee" alt="image 237... un chiot"></figure>
     </div>
 </body>
